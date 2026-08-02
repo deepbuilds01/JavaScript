@@ -6,3 +6,5 @@ console.log(infor);
 const infor1 = {};
 console.log(infor1);
 
+
+console.log("Hello World");
