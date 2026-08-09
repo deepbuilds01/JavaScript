@@ -64,6 +64,8 @@ console.log(Object.values(tinderUser));    // ['deep kumar', '123abc', false ]
 console.log(tinderUser.hasOwnProperty('name'));  // true
 console.log(tinderUser.hasOwnProperty('fullname'));  //  false
 console.log(tinderUser.hasOwnProperty('deep kumar'));  // 
+console.log(tinderUser.hasOwnProperty('deep kumar'));  // 
+
 
 
 
