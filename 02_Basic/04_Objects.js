@@ -11,7 +11,7 @@ const tinderUser = {}
 tinderUser.name = "deep kumar"
 tinderUser.id = "123abc"
 tinderUser.isLogin = false
-console.log(tinderUser);
+// console.log(tinderUser);
 
 
 
@@ -56,15 +56,36 @@ const arr = [
 
 
 
-// how to access only key in object
-console.log(Object.keys(tinderUser));      // [ 'name', 'id', 'isLogin' ]->all the keys store in a array
-// how to access only value in object
-console.log(Object.values(tinderUser));    // ['deep kumar', '123abc', false ]
-// check the key is present or not in a object
-console.log(tinderUser.hasOwnProperty('name'));  // true
-console.log(tinderUser.hasOwnProperty('fullname'));  //  false
-console.log(tinderUser.hasOwnProperty('deep kumar'));  // 
-console.log(tinderUser.hasOwnProperty('deep kumar'));  // 
+//++ how to access only key in object
+// console.log(Object.keys(tinderUser));      // [ 'name', 'id', 'isLogin' ]->all the keys store in a array
+//++ how to access only value in object
+// console.log(Object.values(tinderUser));    // ['deep kumar', '123abc', false ]
+//++ check the key is present or not in a object
+// console.log(tinderUser.hasOwnProperty('name'));  // true
+// console.log(tinderUser.hasOwnProperty('fullname'));  //  false
+// console.log(tinderUser.hasOwnProperty('deep kumar'));  // 
+// console.log(tinderUser.hasOwnProperty('deep kumar'));  // 
+
+
+
+//+++++++++++++++++++++++++++++ de-structure
+const course = {
+    coursename : "JS in hindi",
+    price : "999/-",
+    courseInstructor : "hitesh"
+}
+
+//++ normal access
+// console.log(course.coursename);     // JS in hindi
+// console.log(course.courseInstructor); // hitesh
+
+//++ with object De-constructor
+const {price,courseInstructor} = course
+console.log(price);
+console.log(courseInstructor);
+
+
+
 
 
 
