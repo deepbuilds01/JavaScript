@@ -74,5 +74,5 @@ const arr = [100,200,300,400,500];
 function returnvalue(getarray){
     return getarray[0]
 }
-console.log(returnvalue(arr));
+console.log(returnvalue(arr ));
 
