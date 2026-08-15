@@ -38,9 +38,41 @@ function user(username){
     }
     return  `${username} justlogged in`
 }
-console.log(user()); // if you can not pass the argument the output is "undefine"
+// console.log(user()); // if you can not pass the argument the output is "undefine"
 
 
 
+// function calculateCardPrice(...num1){
+//     return num1;
+// }
+// console.log(calculateCardPrice(100,234,234,234)); // all the number store in array
+//+++++++++++++++++ OR
+function calculateCardPrice(price1, price2,...num1){
+    return num1;
+}
+console.log(calculateCardPrice(100,234,234,234)); //  ( price1->100, price2->234, num1->[234,234])
 
+
+
+//++++++++++++++++ how to pass the object in a function
+
+// Object 
+const Userss= {
+    Username : "DK",
+    price : 999
+}
+// Function 
+function HandleObject(anyobject){
+    console.log(`the user name is ${anyobject.Username} and price is ${anyobject.price} `);
+}
+HandleObject(Userss)
+
+// example 2 using arrays
+// Array Declration
+const arr = [100,200,300,400,500];
+// function 
+function returnvalue(getarray){
+    return getarray[0]
+}
+console.log(returnvalue(arr));
 
