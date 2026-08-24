@@ -29,3 +29,33 @@ buttons.forEach(function(button){
     }
   })
 })
+
+
+
+
+```
+## Project 2 
+
+``` javascript
+
+const form = document.querySelector("form")
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+  // document.querySelector("height").value // they give the value in string type
+  const height = parseInt(document.querySelector("#height").value)
+  const weight = parseInt(document.querySelector("#weight").value)
+  const submit = document.querySelector("#results")
+  if(height <= 0 || isNaN(height) ){
+    submit.innerHTML = `this number is invalid ${height}`
+  }
+  if(weight <= 0 || isNaN(weight) ){
+    submit.innerHTML = `this number is invalid ${weight}`
+  }else{
+    const bmi = (weight / ((height*height)/10000)).toFixed(2)
+    submit.innerHTML = `<span>${bmi}</span>`
+    
+  }
+})
+
+
+
