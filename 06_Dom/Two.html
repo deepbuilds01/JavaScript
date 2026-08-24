@@ -1,0 +1,49 @@
+
+
+/* How to create an element in DOM */
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+    <div class = "parent">
+        <div class = "child">monday</div>
+        <div class = "child">tuesday</div>
+        <div class = "child">wednesday</div>
+        <div class = "child">thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children);
+    
+    // for(let i = 0; i<parent.children.length; i++){
+    //     console.log(parent.children[i].innerHTML);
+    // }
+    // parent.children[0].style.color = "red"
+    // parent.children[1].style.color = "green"
+
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+
+    const day = document.querySelector(".child")
+    console.log(day);
+
+    console.log(day.parentElement);
+    console.log(day.nextElementSibling);
+    
+    
+
+
+    
+    
+    
+
+
+</script>
+</html>
