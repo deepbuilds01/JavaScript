@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .parent{
+            border-radius: 200px;
+            background-color: white;
+            padding: 10px;
+            margin: 100px;
+            height: 200px;
+            width: 200px;
+        }
+        .button{
+            padding: 10px;
+            margin-left: 180px;
+        }
+    </style>
+</head>
+<body style="background-color: black; color: white;">
+    <div class = "parent"></div>
+    <button class = " button ">click</button>
+    
+</body>
+<script>
+    const col = document.querySelector(".parent")
+    const ans = document.querySelector(".button");
+    let count = 0;
+    ans.addEventListener("click", function () {
+    if (count === 0) {
+        col.style.backgroundColor = "yellow";
+        count = 1;
+    } 
+    else {
+        col.style.backgroundColor = "white";
+        count = 0;
+    }
+});
+
+</script>
+</html>
