@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        /* by id */
+        #main{   
+            border-radius: 200px;
+            background-color: white;
+            padding: 10px;
+            margin: 100px;
+            height: 200px;
+            width: 200px;
+        } 
+
+
+        /* by class */
+        .main{       
+            border-radius: 200px;
+            background-color: white;
+            padding: 10px;
+            margin: 100px;
+            height: 200px;
+            width: 200px;
+        }
+
+    </style>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;" class="parent">
+    // Event apply in dev
+    <!-- <div class="main" onclick="alert('hello Deep kumar')" >
+    </div> -->
+    <div id="main" class="main">
+    </div>
+    
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    
+
+    // document.getElementById('main').onclick = function(){
+    //     alert('Hello! ')
+    // }
+    /* +++ OR +++/
+    // document.getElementsByClassName("main")[0].onclick = function(){
+    //     alert(" Hello! ")
+    // }
+    
+    /* +++++++++++++++++ OR ++++++++++*/
+
+    // const main = document.querySelector(".main")
+    // main.addEventListener("click",function(){
+    //     alert('Hello!')
+    // })         /* yha pr false bydefault haa*/ 
+    // main.addEventListener("click",function(){
+    //     alert('Hellodeep!')
+    // },true)      /*true lagne se phele ye print hoga*/
+
+
+
+    // Propogation
+    // document.querySelector('.parent').addEventListener('click',function(){
+    //     console.log("parent!");
+    // })
+    // document.querySelector('.main').addEventListener('click',function(e){
+    //     console.log("circle!");
+    //     e.stopPropagation()
+    // })
+
+
+    // image
+
+    // google pr click karna pr nahi jana uske web site pr
+    // document.querySelector("#google").addEventListener('click', function(e){
+    //     e.preventDefault();
+    //     console.log("hello");
+    // }, false)
+
+    //  remove the Image
+    const image = document.querySelectorAll('#images')
+    image.forEach(element => {
+        element.addEventListener("click",function(e){
+            if(e.target.id === 'photoshop'){
+                e.target.parentNode.remove();
+            }
+            if(e.target.id === 'japan'){
+                e.target.parentNode.remove();
+            }
+            if(e.target.id === 'river'){
+                e.target.parentNode.remove();
+            }
+            if(e.target.id === 'owl'){
+                e.target.parentNode.remove();
+            }
+            if(e.target.id === 'prayer'){
+                e.target.parentNode.remove();
+            }
+            if(e.target.id === 'google'){
+                e.preventDefault()
+                e.target.parentNode.remove();
+            }
+        },false)
+    });
+    
+</script>
+</html>
