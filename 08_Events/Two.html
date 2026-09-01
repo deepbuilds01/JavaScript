@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black;">
+    <h1 style="color: white;">Chai or code</h1>
+    <button id="stop">submit</button>
+</body>
+<script>
+    //+++++++++ Settimeout +++++++++//
+    // setTimeout(function(){
+    //     console.log("deep kumar");
+    // },10000)
+
+    // const name = function(){
+    //     console.log("deep kumar");
+    // }
+    // setTimeout(name,10000)
+    //  setTimeout(name,50000)      // change on 5 sec
+
+    // const change = function(){
+    //     document.querySelector("h1").innerHTML = "Best JS series"
+    // }
+    // setTimeout(change,10000)
+
+
+    // //++++++++ clear time out(how to stop the time out) ++++++++++
+    // const change = function(){
+    //     document.querySelector("h1").innerHTML = "Best JS series"
+    // }
+    // const out = setTimeout(change,3000)
+    // clearTimeout(out);
+
+
+    // +++++++++ set time out apply in event++++++++
+
+    const change = function(){
+        document.querySelector("h1").innerHTML = "Best JS series"
+    }
+    const out = setTimeout(change,3000)
+    const button = document.querySelector("#stop")
+    button.addEventListener("click",function(){
+        clearTimeout(out)
+        console.log("stoped");
+        
+    })
+
+
+
+
+
+</script>
+</html>
