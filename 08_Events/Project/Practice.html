@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style=" background-color: black;">
+    <h1 style="color:white">chai or code</h1>
+    <button id="start" > start </button>
+    <button id="stop"> stop </button>
+    <br><button id="change" >change </button>
+</body>
+<script>
+
+  //+++++++++       Settimeout       +++++++++//
+
+  // setTimeout(() => {
+  //   console.log("deep kumar");
+  // }, 10000);
+
+
+  // const changefunction = function(){
+  //   setTimeout(function(){
+  //     document.querySelector("h1").innerHTML = "jhabsas"
+  //   },10000)
+  // }
+  // const change = document.querySelector("#change")
+  // change.addEventListener("click" , changefunction)
+  //+++++++++++ OR +++++++++++++
+  // document.querySelector("#change").addEventListener("click", function(){
+  //   setTimeout(function(){
+  //     document.querySelector("h1").innerHTML = "you can do it"
+  //   }, 5000)
+  // })
+
+  // //how to stop event
+  // let ans ;
+  // const changefunction = () => {
+  //   ans = setTimeout(function(){
+  //     document.querySelector("h1").innerHTML = "deep kumar"
+  //   },1000)
+  // }
+  // const  change = document.querySelector("#change")
+  // change.addEventListener("click", changefunction)
+  
+  // change.addEventListener("click", function(){
+  //   clearTimeout(ans)
+  //   console.log("stoped");
+    
+  // })
+
+  
+
+  //+++++++++  setIntevel  ++++++++++
+
+    setInterval(function(){
+        // console.log("deep kumar");
+    })
+
+
+    // //project = 1. ++++++ start and stop manual
+    // let ans ;
+    // const stoped = function(){
+    //   console.log("deep kumar");
+      
+    // }
+    // const start = document.querySelector("#start")
+    // start.addEventListener("click", function(){
+    //   // setInterval(stoped, 1000);
+    //   ans = setInterval(stoped);
+    // })
+
+    // const stop = document.querySelector("#stop")
+    // stop.addEventListener("click", function(){
+    //   clearInterval(ans,1000)
+    //   console.log(stoped);
+    // })
+
+
+    //++++++++++ change-background-color ++++++++++++
+
+    // // how to create color 
+    // const colors = function(){
+    //   let Hex = "0123456789ABCDEF";
+    //   let color = "#";
+    //   for(let i=0; i<6; i++){
+    //     color += Hex[Math.floor(Math.random()*16)]
+    //   }
+    //   return color;
+    // }
+
+    // let col;
+    // const start = document.querySelector("#start")
+    // start.addEventListener("click", function(){
+    //   // setTimeout(() => {
+    //   //   document.body.style.backgroundColor = colors();
+    //   // });
+
+    //   col = setInterval(function(){
+    //      document.body.style.backgroundColor = colors();
+    //   },1000)
+    // })
+
+    // const stop = document.querySelector("#stop")
+    // stop.addEventListener("click", function(){
+    //    clearInterval(col)
+    // })
+
+
+    document.querySelector("#start").addEventListener("click", function(){
+      alert("hello")
+    })
+
+</script>
+</html>
