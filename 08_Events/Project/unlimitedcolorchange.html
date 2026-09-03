@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black;">
+    <h1 style="color: white;">chai or code</h1>
+    <button id="start" style="padding-right: 20px;">start</button>
+    <button id="stop" style="padding-right: 20px;">stop</button>
+</body>
+<script>
+//    const colors = ["red", "blue", "green", "yellow", "purple"];
+
+// let i = 0;
+// let colorInterval = null;
+
+// const start = document.querySelector("#start");
+// const stop = document.querySelector("#stop");
+
+// start.addEventListener("click", function () {
+//     colorInterval = setInterval(function () {
+//         document.body.style.backgroundColor = colors[i];
+
+//         i++;
+
+//         if (i === colors.length) {
+//             i = 0;
+//         }
+//     }, 1000);
+// });
+
+// stop.addEventListener("click", function () {
+//     clearInterval(colorInterval);
+//     colorInterval = null;
+// });
+
+
+//++++++++++ change-background-color ++++++++++++
+
+    // how to create color 
+    const colors = function(){
+      let Hex = "0123456789ABCDEF";
+      let color = "#";
+      for(let i=0; i<6; i++){
+        color += Hex[Math.floor(Math.random()*16)]
+      }
+      return color;
+    }
+
+    let col;
+    const start = document.querySelector("#start")
+    start.addEventListener("click", function(){
+      // setTimeout(() => {
+      //   document.body.style.backgroundColor = colors();
+      // });
+
+      col = setInterval(function(){
+         document.body.style.backgroundColor = colors();
+      },1000)
+    })
+
+    const stop = document.querySelector("#stop")
+    stop.addEventListener("click", function(){
+       clearInterval(col)
+    })
+</script>
+</html>
