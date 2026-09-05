@@ -7,7 +7,6 @@ Object ->   In JavaScript, an object is a collection of key-value pairs.
 */
 
 
-
 // this is a Non-Singleton object 
 
 const userinformation = {
@@ -76,8 +75,6 @@ user.greetingTwo = function(){
 
 console.log(user.greeting());
 console.log(user.greetingTwo());
-
-
 
 
 
